@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F00C817D26FF916C00D4614D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00C817C26FF916C00D4614D /* Task.swift */; };
+		F038B61F26FFB72B00FF5E2E /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F038B61E26FFB72B00FF5E2E /* AddTaskVC.swift */; };
 		F05BFBEF26FF8E7B00C0DDA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05BFBEE26FF8E7B00C0DDA8 /* AppDelegate.swift */; };
 		F05BFBF126FF8E7B00C0DDA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05BFBF026FF8E7B00C0DDA8 /* SceneDelegate.swift */; };
 		F05BFBF326FF8E7B00C0DDA8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05BFBF226FF8E7B00C0DDA8 /* HomeVC.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		F00C817C26FF916C00D4614D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F038B61E26FFB72B00FF5E2E /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		F05BFBEB26FF8E7B00C0DDA8 /* TaskManagerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05BFBEE26FF8E7B00C0DDA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F05BFBF026FF8E7B00C0DDA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				F05BFBF226FF8E7B00C0DDA8 /* HomeVC.swift */,
+				F038B61E26FFB72B00FF5E2E /* AddTaskVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				F00C817D26FF916C00D4614D /* Task.swift in Sources */,
 				F05BFBF326FF8E7B00C0DDA8 /* HomeVC.swift in Sources */,
+				F038B61F26FFB72B00FF5E2E /* AddTaskVC.swift in Sources */,
 				F05BFBEF26FF8E7B00C0DDA8 /* AppDelegate.swift in Sources */,
 				F05BFBF126FF8E7B00C0DDA8 /* SceneDelegate.swift in Sources */,
 			);

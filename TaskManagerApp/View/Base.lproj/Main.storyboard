@@ -58,15 +58,78 @@
                             <constraint firstItem="yIK-Ya-WK0" firstAttribute="top" secondItem="7i7-Iu-8Nq" secondAttribute="bottom" constant="10" id="zhV-1l-rub"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Task List" id="4zG-y2-gkB"/>
+                    <navigationItem key="navigationItem" title="My Task List" id="4zG-y2-gkB">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="LoC-mt-cnm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addPressed:" destination="BYZ-38-t0r" id="C9x-tR-cID"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="segmentedView" destination="7i7-Iu-8Nq" id="qHs-ba-BZM"/>
                         <outlet property="taskTableView" destination="yIK-Ya-WK0" id="n7R-l4-GoK"/>
+                        <segue destination="WFc-I8-XUI" kind="show" identifier="listToAdd" id="GHB-lu-qAr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.15942028985512" y="137.94642857142856"/>
+        </scene>
+        <!--Add Task-->
+        <scene sceneID="Jns-5A-GaA">
+            <objects>
+                <viewController id="8aC-15-H3v" customClass="AddTaskVC" customModule="TaskManagerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNX-oe-tHN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mj6-nW-spp">
+                                <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                <segments>
+                                    <segment title="high"/>
+                                    <segment title="medium"/>
+                                    <segment title="low"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.6148123741" green="0.1017967239" blue="0.1002308354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-af-RG7">
+                                <rect key="frame" x="20" y="63" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zXb-tP-pjh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GPz-Yv-2ml"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dbW-af-RG7" firstAttribute="leading" secondItem="mj6-nW-spp" secondAttribute="leading" id="9S0-Zz-l6b"/>
+                            <constraint firstItem="GPz-Yv-2ml" firstAttribute="trailing" secondItem="mj6-nW-spp" secondAttribute="trailing" constant="20" id="I1t-6r-36p"/>
+                            <constraint firstItem="dbW-af-RG7" firstAttribute="top" secondItem="mj6-nW-spp" secondAttribute="bottom" constant="12" id="Mgc-ed-7wU"/>
+                            <constraint firstItem="mj6-nW-spp" firstAttribute="leading" secondItem="GPz-Yv-2ml" secondAttribute="leading" constant="20" id="N7F-R6-7UX"/>
+                            <constraint firstItem="mj6-nW-spp" firstAttribute="top" secondItem="GPz-Yv-2ml" secondAttribute="top" constant="20" id="b5K-rh-KtZ"/>
+                            <constraint firstItem="dbW-af-RG7" firstAttribute="trailing" secondItem="mj6-nW-spp" secondAttribute="trailing" id="jPX-6s-I2O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Task" id="i8l-A8-L2i">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Yde-eb-H0C">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="savePressed:" destination="8aC-15-H3v" id="nmL-zT-ZxD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="prioritySegmented" destination="mj6-nW-spp" id="5md-Oe-wkw"/>
+                        <outlet property="taskTextField" destination="dbW-af-RG7" id="V0s-tC-vjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exg-r3-IyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085.507246376812" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PYF-BD-GHp">
@@ -90,8 +153,32 @@
             </objects>
             <point key="canvasLocation" x="71.014492753623188" y="137.94642857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g1n-cq-w4z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WFc-I8-XUI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qCP-cn-8nd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Qgw-m5-Z5c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.6148123741" green="0.1017967239" blue="0.1002308354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8aC-15-H3v" kind="relationship" relationship="rootViewController" id="9JT-8S-oVk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q43-42-dcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173.913043478261" y="137.94642857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
