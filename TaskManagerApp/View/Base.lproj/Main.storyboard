@@ -19,13 +19,16 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7i7-Iu-8Nq">
                                 <rect key="frame" x="20" y="20" width="374" height="32"/>
                                 <segments>
-                                    <segment title="All"/>
+                                    <segment title="all"/>
                                     <segment title="high"/>
                                     <segment title="medium"/>
                                     <segment title="low"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="selectedSegmentTintColor" red="0.6148123741" green="0.1017967239" blue="0.1002308354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didselectSegments:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gb2-w4-6dg"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yIK-Ya-WK0">
                                 <rect key="frame" x="20" y="61" width="374" height="713"/>
@@ -69,7 +72,7 @@
                     <connections>
                         <outlet property="segmentedView" destination="7i7-Iu-8Nq" id="qHs-ba-BZM"/>
                         <outlet property="taskTableView" destination="yIK-Ya-WK0" id="n7R-l4-GoK"/>
-                        <segue destination="WFc-I8-XUI" kind="show" identifier="listToAdd" id="GHB-lu-qAr"/>
+                        <segue destination="8aC-15-H3v" kind="show" identifier="listToAdd" id="SxA-yf-bgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -129,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exg-r3-IyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085.507246376812" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1922" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PYF-BD-GHp">
@@ -152,29 +155,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4B-lO-lmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="71.014492753623188" y="137.94642857142856"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="g1n-cq-w4z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WFc-I8-XUI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="qCP-cn-8nd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Qgw-m5-Z5c">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.6148123741" green="0.1017967239" blue="0.1002308354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8aC-15-H3v" kind="relationship" relationship="rootViewController" id="9JT-8S-oVk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q43-42-dcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2173.913043478261" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
